@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+button {
+    border-radius: 4px;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav,
+.home,
+.blog-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav {
+    width: 100vw;
+    height: 30px;
+    background-color: #3339;
+    color: #ddd;
+}
+
+.home {
+    flex-direction: column;
+    width: 100vw;
+    height: 97vh;
+    background-color: #444;
+    padding: 10px 50px;
+}
+
+.home h1 {
+    color: #ddd;
+    font-size: 40px;
+}
+
+.home p {
+    color: #eee;
+    font-size: 18px;
+}
+
+.home button {
+    padding: 10px 20px;
+    background-color: #ddd;
+    color: #333;
+    font-size: 25px;
+}
+
+.blog-list {
+    flex-direction: column;
+    height: 100%;
+    overflow-y: scroll;
+    width: 100vw;
+    padding: 20px 40px;
+}
+
+.blog {
+    width: 400px;
+    height: 500px;
+    background-color: #eee;
+    color: #222;
+    position: relative;
+    margin: 10px 0;
+}
+
+.blog span,
+.blog p {
+    position: absolute;
+}
+
+.blog h1 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.blog span {
+    right: 0;
+    top: 0;
+    font-size: 12px;
+    padding: 5px;
+}
+
+.blog p {
+    padding: 10px;
+}
+
+.blog span:nth-child(3) {
+    margin-top: 20px;
+}
+
