@@ -5,6 +5,7 @@ import Home from './components/Home'
 import BlogList from './components/BlogList'
 import Contact from './components/Contact'
 import data from './components/blogData.json'
+import ErrorBoundary from './ErrorBoundary'
 
 class App extends Component {
     constructor(){
@@ -26,9 +27,15 @@ class App extends Component {
                 <Switch>
                     <Route exact path="/" component={Home}/>
                     <Route path="/blog" render={ props => 
-                                            <BlogList {...props} blogs={this.state.blogs}/>
+                                            <ErrorBoundary>
+                                                <BlogList {...props} blogs={this.state.blogs}/>
+                                            </ErrorBoundary>
                                         }/>
-                    <Route path="/contact" component={Contact}/>
+                    <Route path="/contact" render={ props =>
+                                            <ErrorBoundary>
+                                                <Contact {...props}/>
+                                            </ErrorBoundary>
+                                            }/>
                 </Switch>
             </div>
         )
